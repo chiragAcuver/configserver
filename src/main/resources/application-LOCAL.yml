@@ -1,0 +1,33 @@
+server:
+  port: 7777
+
+management:
+  context-path: /admin
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /admin/info
+    healthCheckUrlPath: /admin/health
+
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      enabled: true
+      server:
+        git:
+          search-paths:
+            - conf-*
+          uri: https://github.com/chiragAcuver/app-configs.git
+          basedir: target/config
+    loadbalancer:
+      ribbon:
+        enabled: false
