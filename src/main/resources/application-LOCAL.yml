@@ -9,11 +9,11 @@ logging:
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
 
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    statusPageUrlPath: /admin/info
-    healthCheckUrlPath: /admin/health
+#eureka:
+  #instance:
+    #leaseRenewalIntervalInSeconds: 10
+    #statusPageUrlPath: /admin/info
+    #healthCheckUrlPath: /admin/health
 
 
 spring:
